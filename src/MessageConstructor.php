@@ -49,7 +49,7 @@ class MessageConstructor
 
             return "$this->user, $uppercase_character's $btn is $frames frames $output";
         } else {
-            return "Data not found - Use `!frame help` command for assistance :)
+            return "Data not found or incorrect keys - Use `!frame help` command for assistance :)
             -- D7X
             ";
         }
