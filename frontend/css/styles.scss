@@ -11,6 +11,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
+  background-color: #151621;
   &::before {
     content: '';
     position: absolute;
@@ -56,19 +57,6 @@ header {
     gap: 22px;
   }
 
-  .header__cord-btn {
-    background-color: #258bff;
-    color: white;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    padding: 11px 27px;
-    border-radius: 9px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   #header__link {
     color: #8d8f9c;
     text-decoration: none;
@@ -94,6 +82,27 @@ header {
     }
   }
 }
+
+.header__cord-btn {
+    background-color: #258bff;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 11px 27px;
+    border-radius: 9px;
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    span img {
+        width: 20px;
+        height: auto;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
 .banner__container {
   background: linear-gradient(
@@ -131,6 +140,9 @@ header {
     gap: 24px;
     h1 {
       color: white;
+      span {
+        color: #258bff;
+      }
     }
     p {
       color: #8d8f9c;

@@ -11,6 +11,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
+  background-color: #151621;
 }
 body::before {
   content: "";
@@ -54,18 +55,6 @@ header .header__btn-container {
   align-items: center;
   gap: 22px;
 }
-header .header__cord-btn {
-  background-color: #258bff;
-  color: white;
-  outline: none;
-  border: none;
-  font-size: 18px;
-  padding: 11px 27px;
-  border-radius: 9px;
-}
-header .header__cord-btn:hover {
-  cursor: pointer;
-}
 header #header__link {
   color: #8d8f9c;
   text-decoration: none;
@@ -87,6 +76,27 @@ header #header__git-btn {
   border-radius: 9px;
 }
 header #header__git-btn:hover {
+  cursor: pointer;
+}
+
+.header__cord-btn {
+  background-color: #258bff;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 11px 27px;
+  border-radius: 9px;
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  align-items: center;
+}
+.header__cord-btn span img {
+  width: 20px;
+  height: auto;
+}
+.header__cord-btn:hover {
   cursor: pointer;
 }
 
@@ -118,6 +128,9 @@ header #header__git-btn:hover {
 }
 .main-info__container div h1 {
   color: white;
+}
+.main-info__container div h1 span {
+  color: #258bff;
 }
 .main-info__container div p {
   color: #8d8f9c;

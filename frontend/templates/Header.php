@@ -14,7 +14,7 @@
       <a class="header__link"
         href="https://discord.com/oauth2/authorize?client_id=1235780072523169932&permissions=68608&scope=bot"
         target="_blank">
-        <button class="header__cord-btn">Add to Discord</button></a>
+        <?php include 'buttons/DiscordButton.php' ?>
     </div>
 
     <!-- Only available from a certain screen width  -->
