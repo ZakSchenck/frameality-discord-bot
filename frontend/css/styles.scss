@@ -1,74 +1,200 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #000000;
-    background-image: url('https://wallpapers.com/images/hd/discord-clyde-hazy-art-43m1dzspfmstxj69.jpg');
-    background-size: cover;
-    background-repeat:no-repeat ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url('https://i.redd.it/397fljle7ml61.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
 }
 
 header {
-    height: 80px;
-    background-color: #151621;
-    border-bottom: 1px solid rgb(68, 68, 68);
+  height: 80px;
+  background-color: #151621;
+  border-bottom: 1px solid rgb(68, 68, 68);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 12%;
+  justify-content: space-between;
+  .header__logo-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0 12%;
-    justify-content: space-between;
-    .header__logo-container {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        h1 {
-            color: white;
-        }
+    gap: 16px;
+    h1 {
+      color: white;
     }
-    img {
-        width: 60px;
-        height: 60px;
-    }
+  }
+  img {
+    width: 60px;
+    height: 60px;
+  }
 
-    a {
-        text-decoration: none;
-        color: white;
-    }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
-    .header__btn-container {
-        display: flex;
-        align-items: center;
-        gap: 22px;
-    }
+  .header__btn-container {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
 
-    #header__cord-btn {
-        background-color: #258bff;
-        color: white;
-        outline: none;
-        border: none;
-        font-size: 18px;
-        padding: 11px 27px;
-        border-radius: 9px;
-        &:hover {
-            cursor: pointer;
-        }
+  .header__cord-btn {
+    background-color: #258bff;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 11px 27px;
+    border-radius: 9px;
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    #header__git-btn {
-        background-color: #433726;
-        color: #FFC24F;
-        outline: none;
-        border: none;
-        font-size: 18px;
-        padding: 11px 27px;
-        border-radius: 9px;
-        &:hover {
-            cursor: pointer;
-        }
+  #header__link {
+    color: #8d8f9c;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 22px;
+    font-size: 17px;
+    &:hover {
+      color: #b8bacc;
+      cursor: pointer;
     }
+  }
+
+  #header__git-btn {
+    background-color: #433726;
+    color: #ffc24f;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 11px 27px;
+    border-radius: 9px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.banner__container {
+  background: linear-gradient(
+    to right,
+    indigo,
+    violet,
+    purple,
+    purple,
+    rgb(221, 158, 169),
+    rgb(180, 128, 137),
+    rgb(114, 82, 87),
+    rgb(94, 94, 252)
+  );
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.main-info__container {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 13%;
+  div {
+    width: 385px;
+    height: 385px;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h1 {
+      color: white;
+    }
+    p {
+      color: #8d8f9c;
+      line-height: 30px;
+      font-size: 16px;
+    }
+    .header__cord-btn {
+      background-color: #258bff;
+      color: white;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      padding: 11px 27px;
+      border-radius: 9px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.header__small-btn-container {
+    display: flex;
+    align-items: center;
+  a img {
+    width: 37px;
+    height: auto;
+    margin-left: 8px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .main-info__container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+  }
+
+  header {
+    padding: 0 3%;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .header__logo-container h1 {
+    display: none;
+  }
+
+  .main-info__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div {
+      width: 88% !important;
+    }
+  }
+}
+@media all and (max-width: 745px) {
+  .banner__container h3 {
+    font-size: 13px;
+    margin: 0 12px;
+  }
+
+  #header__link {
+    margin-left: 0px !important;
+  }
 }
