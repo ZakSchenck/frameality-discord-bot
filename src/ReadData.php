@@ -1,4 +1,5 @@
 <?php
+namespace BotLogic;
 class ReadData {
     private $frame_data_to_obj;
 

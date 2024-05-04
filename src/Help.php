@@ -1,5 +1,6 @@
 <?php
 
+namespace BotLogic;
 class Help
 {
     private $message;

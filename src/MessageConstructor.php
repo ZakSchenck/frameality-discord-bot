@@ -1,4 +1,5 @@
 <?php
+namespace BotLogic;
 require_once 'ReadData.php';
 class MessageConstructor
 {

@@ -1,10 +1,14 @@
 <?php
+
+namespace BotLogic;
+use Dotenv\Dotenv;
+
 require 'vendor/autoload.php';
 require 'GetFramesByChar.php';
 require 'MessageConstructor.php';
 require 'Help.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . './../');
+$dotenv = Dotenv::createImmutable(__DIR__ . './../');
 $dotenv->load();
 
 use Discord\Discord;
@@ -33,7 +37,6 @@ $discord->on('message', function (Message $message) use ($discord) {
         }
     } catch (Exception $e) {
         echo 'Error: ' . $e->getMessage();
-        // Optionally log the error or send a message back to the server
     }
 });
 

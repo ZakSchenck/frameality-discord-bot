@@ -80,6 +80,10 @@ class ComposerStaticInitf076ddbfdf8551f0f0680f8d75044a72
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
+        'B' => 
+        array (
+            'BotLogic\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -212,6 +216,10 @@ class ComposerStaticInitf076ddbfdf8551f0f0680f8d75044a72
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+        'BotLogic\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

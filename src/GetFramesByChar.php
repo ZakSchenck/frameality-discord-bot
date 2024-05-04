@@ -1,5 +1,6 @@
 <?php
 
+namespace BotLogic;
 require_once 'ReadData.php';
 
 class GetFramesByChar {
