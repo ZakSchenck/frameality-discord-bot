@@ -1,9 +1,6 @@
 <?php
-$banner_template = file_get_contents('templates/Banner.php');
-echo $banner_template;
+include 'templates/Banner.php';
 
-$header_template = file_get_contents('templates/Header.php');
-echo $header_template;
+include 'templates/Header.php';
 
-$maininfo_template = file_get_contents('templates/MainInfo.php');
-echo $maininfo_template;
+include 'templates/MainInfo.php';
