@@ -4,12 +4,14 @@ namespace BotLogic;
 use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
-require 'GetFramesByChar.php';
-require 'MessageConstructor.php';
-require 'Help.php';
+require 'src/GetFramesByChar.php';
+require 'src/MessageConstructor.php';
+require 'src/Help.php';
 
-$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+if (!getenv('IS_HEROKU')) {
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
 
 use Discord\Discord;
 use Discord\Parts\Channel\Message;
