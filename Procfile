@@ -1,1 +1,1 @@
-worker: php src/Index.php
+worker: php Index.php
