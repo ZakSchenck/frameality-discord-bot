@@ -8,7 +8,7 @@ require 'GetFramesByChar.php';
 require 'MessageConstructor.php';
 require 'Help.php';
 
-$dotenv = Dotenv::createImmutable('./');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 use Discord\Discord;
