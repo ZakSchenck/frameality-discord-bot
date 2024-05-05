@@ -1,8 +1,4 @@
-<?php
-?>
-
-<body>
-  <header>
+<header>
     <div class="header__logo-container">
       <img src="assets/mkxlogo.png" alt="logo" id="header__logo" />
       <h1>FRAMEALITY</h1>
@@ -33,4 +29,3 @@
   </header>
 
   <script src="utils/utilFunc.js"></script>
-</body>

@@ -9,8 +9,7 @@ body {
   background: url('https://i.redd.it/397fljle7ml61.png');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
   background-color: #151621;
   &::before {
     content: '';
@@ -104,6 +103,27 @@ header {
     }
   }
 
+.header__cord-btn-white {
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 11px 27px;
+    border-radius: 9px;
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    span img {
+        width: 20px;
+        height: auto;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
 .banner__container {
   background: linear-gradient(
     to right,
@@ -174,6 +194,72 @@ header {
   }
 }
 
+.info {
+    margin: 100vh auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 250px;
+}
+
+.info__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1200px;
+    align-items: center;
+    img {
+        width: 550px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        p {
+            color: #8d8f9c;
+            line-height: 38px;
+        }
+        h1 {
+            color: white;
+        }
+    }
+}
+
+.sub-footer__container {
+    height: 270px;
+    background-color: #258bff;
+    color: white;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    a {
+        text-decoration: none;
+    }
+}
+
+footer {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    a img {
+        border-radius: 50%;
+        height: 60px;
+        width: auto;
+    }
+}
+
 @media all and (max-width: 1300px) {
   .main-info__container {
     left: 50%;
@@ -184,6 +270,26 @@ header {
   header {
     padding: 0 3%;
   }
+}
+
+@media all and (max-width: 1225px) {
+    .info__container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .info__container img {
+        width: 98%;
+        height: auto;
+        padding: 16px;
+    }
+
+    .sub-footer__container h1 {
+        margin: 0 12px;
+        font-size: 22px;
+    }
 }
 
 @media all and (max-width: 925px) {
